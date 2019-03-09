@@ -1,0 +1,7 @@
+{
+    "cert_arn": "arn:aws:iot:ap-south-1:586426530631:cert/3ccddd56359ca8c0768df5a4975b18326f5f44300d1f3d4261e200ec23807466",
+    "endpoint": "adxo7wrez4wzn-ats.iot.ap-south-1.amazonaws.com",
+    "mqttid": "AnalyzerBuddy",
+    "policy_name": "AnalyzerBuddy-Policy",
+    "thingname": "AnalyzerBuddy"
+}

@@ -1,0 +1,29 @@
+
+
+import json
+
+def load_from_resource(mresource):
+    mstream = open(mresource)
+    barray = bytearray()
+    while True:
+        rd = mstream.read(1)
+        if not rd:
+            barray.append(0x0)
+            break
+        barray.append(rd[0])
+    return barray
+
+def load_key_cert(key_file, cert_file):
+    pkey = load_from_resource('resource://' + key_file)
+    clicert = load_from_resource('resource://' + cert_file)
+    return pkey, clicert
+
+def load_thing_conf():
+    confstream = open('resource://thing.conf.json')
+    conf = ''
+    while True:
+        line = confstream.readline()
+        if not line:
+            break
+        conf += line
+    return json.loads(conf)
